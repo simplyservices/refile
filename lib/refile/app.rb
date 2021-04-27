@@ -29,6 +29,7 @@ module Refile
         response["Access-Control-Allow-Origin"] = Refile.allow_origin
         response["Access-Control-Allow-Headers"] = request.env["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"].to_s
         response["Access-Control-Allow-Method"] = request.env["HTTP_ACCESS_CONTROL_REQUEST_METHOD"].to_s
+        response["X-Lamby-Base64"] = '1'
       end
     end
 
